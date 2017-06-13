@@ -5,7 +5,7 @@
 		<div class="row1 fixed">
 			<div class="container">
 				<p class="subscribe"><i class="fa fa-envelope"></i> <?php _e('Receba dicas e oportunidades por email:') ?></p>
-				<form id="formnews_footer" class="news-subscribe">
+				<form id="formnews_footer">
 					<input type="text" name="nome" placeholder="Nome:">
 					<input type="text" name="email" placeholder="E-mail:">
 					<button type="button"><?php _e('Inscrever') ?></button>
@@ -27,7 +27,7 @@
 				<div class="col-md-5 col-sm-12 col-xs-12">
 					<ul class="pull-right">
 						<li><a href="<?php bloginfo('url') ?>/politica-de-privacidade/">Política de Privacidade</a></li>
-						<li><a href="<?php bloginfo('url') ?>/termos-e-condicoes/">Termos e Condições</a></li>
+						<!---<li><a href="<?php bloginfo('url') ?>/termos-e-condicoes/">Termos e Condições</a></li>-->
 					</ul>
 				</div>
 			</div>
@@ -41,5 +41,13 @@
 <script type="text/javascript" src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/main.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-101030352-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

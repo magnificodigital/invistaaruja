@@ -2,8 +2,8 @@
 
 	<div class="box">
 		<div class="ad">
-			<a href="http://ibisaruja.com.br" target="_blank">
-				<img src="<?php bloginfo('template_url') ?>/img/banner-ibis.jpg">
+			<a href="http://ibisaruja.com.br" target="_blank" title="Invista em um hotel com a bandeira Ibis">
+				<img src="<?php bloginfo('template_url') ?>/img/banner-ibis.jpg" alt="Banner Ibis">
 			</a>
 		</div>
 	</div>
@@ -15,17 +15,6 @@
 		<p></p>
 	</div>-->
 	<?php endif; ?>
-
-	<?php /*
-	<div class="box">	
-		<h4>Assine nossa newsletter</h4>
-		<form method="post" class="news-subscribe">
-			<input type="text" name="nome" placeholder="Nome:" />
-			<input type="text" name="email" placeholder="E-mail:" />
-			<button type="button">Assinar</button>
-		</form>
-	</div>
-	*/ ?>
 
 	<div class="box recent-posts">
 		<h4>Assuntos mais vistos</h4>
@@ -45,11 +34,10 @@
 				<article class="post">
 		            <a href="<?php the_permalink() ?>">
 		            <?php
-
 		            	if (is_single()) {
-		            		the_post_thumbnail('post_single_sidebar');
+		            		the_post_thumbnail('post_single_sidebar', array('alt' => get_the_title(), 'title' => get_the_title()));
 		            	} else {
-		            		the_post_thumbnail('sidebar');
+		            		the_post_thumbnail('sidebar', array('alt' => get_the_title(), 'title' => get_the_title()));
 		            	} ?>
 		            </a>
 		            <h5><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h5>
@@ -62,8 +50,5 @@
 
 			</div>
 	</div>
-
-	<?php /* sidebar 1 */ if ( ! dynamic_sidebar( 'sidebar' ) ) : ?>
-	<?php endif; /* fim sidebar 1 */ ?>
 
 </aside>
