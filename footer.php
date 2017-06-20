@@ -5,15 +5,17 @@
 		<div class="row1 fixed">
 			<div class="container">
 				<p class="subscribe"><i class="fa fa-envelope"></i> <?php _e('Receba dicas e oportunidades por email:') ?></p>
-				<form id="formnews_footer">
-					<input type="text" name="nome" placeholder="Nome:">
-					<input type="text" name="email" placeholder="E-mail:">
-					<button type="button"><?php _e('Inscrever') ?></button>
-				</form>
-				<div class="link-redes-sociais">
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-instagram"></i></a>
-					<a href="#"><i class="fa fa-google"></i></a>
+				<div class="pull-right">
+					<form id="formnews_footer" name="formnews_footer" action="<?php bloginfo('url') ?>" method="post">
+						<input type="text" name="nomenews" placeholder="Nome:" required>
+						<input type="email" name="emailnews" placeholder="E-mail:" required>
+						<button type="submit"><?php _e('Inscrever') ?></button>
+					</form>
+					<div id="link-redes-sociais">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class="fa fa-google"></i></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -49,5 +51,28 @@
   ga('create', 'UA-101030352-1', 'auto');
   ga('send', 'pageview');
 </script>
+
+
+
+<!--código de monitoramento-->
+<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/1f43a906-f1a1-427f-bb5d-30ea68ae49f5-loader.js" ></script>
+
+<!--integração rd -->
+<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/integration/stable/rd-js-integration.min.js"></script>  
+<script type="text/javascript">
+
+    var meus_campos = {
+        'nomenews': 'nome',
+        'emailnews': 'email'
+     };
+    options = { fieldMapping: meus_campos };
+    RdIntegration.integrate('5bc74d9a15dc71ab1bd0bc162ae544d5', '[INVISTA ARUJÁ] - Form Newsletter', options);  
+
+    $('#formnews_footer').submit(function(){
+    	alert('Cadastro realizado com sucesso!');
+    });
+
+</script>
+
 </body>
 </html>

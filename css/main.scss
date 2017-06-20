@@ -52,7 +52,9 @@ h6 {
 
 form {
 	input,button {padding: 10px; outline: none; border-radius: 3px;}
-	input[type="text"],textarea {
+	input[type="text"],
+	input[type="email"],
+	textarea {
 		border: 0;
 		background: rgb(250,250,250);
 	}
@@ -359,7 +361,13 @@ footer#site {
 		}
 	}
 
-	.alturarow1 {height: 60px; position: relative; width: 100%;}
+	.alturarow1 {
+		height: 60px; 
+		position: relative; 
+		width: 100%;
+		.container {text-align: center;}
+	}
+
 	.row1 {
 		background: #DDD;
 		width: 100%;
@@ -383,10 +391,14 @@ footer#site {
 		font-size: 18px;
 	}
 
-	.link-redes-sociais {float: right;}
-	.link-redes-sociais a {margin-left: 10px;}
-	.link-redes-sociais a:last-child {margin-right: 0;}
-	.link-redes-sociais a i {
+	#link-redes-sociais {
+		display: inline-block;
+		float: left;
+	}
+
+	#link-redes-sociais a {margin-left: 10px; display: in}
+	#link-redes-sociais a:last-child {margin-right: 0;}
+	#link-redes-sociais a i {
 		color: #777;
 		font-size: 24px;
 		margin-top: 10px;
@@ -396,8 +408,8 @@ footer#site {
 
 	@media (max-width: 768px) {
 		.subscribe {margin-bottom: 10px;}
-		.link-redes-sociais {float: left; margin-top: 10px;}
-		.link-redes-sociais a {margin-left: 0; margin-right: 10px;}
+		#link-redes-sociais {float: left; margin-top: 10px;}
+		#link-redes-sociais a {margin-left: 0; margin-right: 10px;}
 		.row2 ul {float: left !important; margin-top: 10px;}
 	}
 
@@ -421,7 +433,7 @@ footer#site {
 			input, button {width: 100%; margin-bottom: 10px;}
 		}
 
-		.link-redes-sociais {margin: 10px auto;}
+		#link-redes-sociais {margin: 10px auto;}
 
 	}
 
@@ -490,14 +502,11 @@ footer#site {
 	}
 }
 
-#row1 {
-	@media (max-width: 768px) {
-		.container {
-			padding-left: 0;
-			padding-right: 0;
-		}
-	}
+#row1 .container {
+	padding-left: 0;
+	padding-right: 0;
 }
+
 #row1 .col {
 	padding-left: 0;
 	padding-right: 0;
@@ -513,6 +522,12 @@ footer#site {
 			@media (max-width: 990px) {
 				height: 320px;
 			}
+
+			.title-wrapper span {
+				background: #FFF;
+				padding: 5px 10px;
+			}
+
 		}
 
 		.title-wrapper {
@@ -752,6 +767,15 @@ header.category {
 #formnews_footer {
 	float: left;
 	margin-bottom: 0;
+
+	@media (min-width: 98px) {	
+		margin-right: 20px;	
+		input {
+			margin-right: 5px;
+			width: 250px;
+		}
+	}
+
 	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 		color: #999;
 	}
@@ -764,4 +788,9 @@ header.category {
 	:-moz-placeholder { /* Firefox 18- */
 		color: #999;
 	}
+}
+
+.footerwrapper-right {
+	position: absolute;
+	right: 0;
 }

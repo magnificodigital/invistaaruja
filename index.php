@@ -8,7 +8,8 @@
 					
 					<?php 
 	                    $args = array(
-		                    'showposts' => 1, 
+		                    'showposts' => 1,
+		                    'post_type' => 'ebook',
 		                    'orderby' => 'date',
 							'order' => 'DESC'
 						); 
@@ -17,11 +18,11 @@
 	                <?php if (have_posts()) : while (have_posts()) : the_post() ?>
 
 					<article class="post left">
-						<a href="<?php the_permalink(); ?>">
+						<a href="<?php the_field('link',get_the_ID()); ?>" target="_blank">
 							<div class="thumbnail" style="background-image: url('<?php the_post_thumbnail_url('index_row1'); ?>')"></div>
 							<div class="title-wrapper">
-								<h1><?php the_title() ?></h1>
-								<span><?php the_field('call_to_action'); ?></span>
+								<span>E-BOOK</span>
+								<h1><?php the_field('call_to_action',get_the_ID()); //the_title() ?></h1>
 							</div>
 						</a>
 					</article>
@@ -40,7 +41,7 @@
 									'showposts' => 2, 
 									'orderby' => 'date',
 									'order' => 'DESC',
-									'offset' => 1
+									//'offset' => 1
 								); 
 							?>
 							<?php query_posts($args); ?>
