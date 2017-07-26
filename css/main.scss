@@ -23,7 +23,7 @@ $alturaheader : 80px;
 .single-post #content,
 .page #content {padding-top: 0;}
 
-.container {
+.home .container {
 	width: auto;
 	max-width: 1440px;
 }
@@ -793,4 +793,16 @@ header.category {
 .footerwrapper-right {
 	position: absolute;
 	right: 0;
+}
+
+.navigation {
+	margin: 20px 0;
+	display: block;
+	a,span {
+		color: #777; 
+		text-decoration: none;
+		margin-right: 10px;
+	}
+	a:hover {color: $cor1;}
+	.current {color: $cor1;}
 }
