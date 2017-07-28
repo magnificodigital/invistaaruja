@@ -465,9 +465,6 @@ footer#site {
   #single-page .content-post p {
     font-size: 18px;
     line-height: 1.5; }
-  #single-post .content-post a,
-  #single-page .content-post a {
-    color: #bf262b; }
   #single-post .content-post img,
   #single-page .content-post img {
     max-width: 100%;
