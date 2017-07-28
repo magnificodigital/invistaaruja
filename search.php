@@ -44,20 +44,23 @@ get_header() ?>
 						</article>
 
 						</div>
-					
-					<?php
-						global $wp_query;
-	                    $big = 999999999;
-	                    $p = array(
-	                        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-	                        'format' => '?paged=%#%',
-	                        'current' => max( 1, get_query_var('paged') ),
-	                        'total' => $wp_query->max_num_pages
-	                    );
-	                    echo '<div class="navigation">'.paginate_links($p).'</div>';
-					?>
+				
 
-				<?php endwhile; else : ?>
+				<?php endwhile; ?>
+				
+				<?php
+					global $wp_query;
+                    $big = 999999999;
+                    $p = array(
+                        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                        'format' => '?paged=%#%',
+                        'current' => max( 1, get_query_var('paged') ),
+                        'total' => $wp_query->max_num_pages
+                    );
+                    echo '<div class="navigation">'.paginate_links($p).'</div>';
+				?>
+
+				<?php else : ?>
 
 					<div class="col-xs-12">
 						<header>	
