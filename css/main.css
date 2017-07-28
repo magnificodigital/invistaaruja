@@ -461,8 +461,11 @@ footer#site {
 #single-post .content-post,
 #single-page .content-post {
   padding: 50px 0; }
-  #single-post .content-post p,
-  #single-page .content-post p {
+  #single-post .content-post p, #single-post .content-post ul, #single-post .content-post li, #single-post .content-post span,
+  #single-page .content-post p,
+  #single-page .content-post ul,
+  #single-page .content-post li,
+  #single-page .content-post span {
     font-size: 18px;
     line-height: 1.5; }
   #single-post .content-post img,
