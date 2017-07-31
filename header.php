@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="gmnLdB5YvGRuXtRxQ-5ach6fA_QuEuDV-zM5LBMOAaA" />
+	<meta name="google-site-verification" content="2N8TLIn9mDUiubjNvxjPA_0yC-QMNmOqSb-OwuIiTdM" />
 
 	<title><?php wp_title(); ?></title>
 
