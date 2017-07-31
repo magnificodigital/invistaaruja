@@ -106,16 +106,19 @@ if ($paged == 1) : ?>
 							</div>
 							<div class="col-md-7 col-sm-7 col-xs-12">	
 								<h3><a href="<?php the_permalink() ?>"><?php echo get_the_title() ?></a></h3>
-								<h4 class="calltoaction"><?php the_field('call_to_action') ?></h4>
-								<?php
-                                    $id = get_the_ID();
-                                    $category_detail = get_the_category($id);        
-                                    foreach ($category_detail as $cd) {
-                                        $nomecategoria = $cd->cat_name;
-                                        $linkcategoria = get_bloginfo('url').'/categoria/'.$cd->slug;
-                                    }
-                                ?>
-                                <p class="cat"><a href="<?php echo $linkcategoria ?>"><?php echo $nomecategoria; ?></a></p>
+								<!--<h4 class="calltoaction"><?php the_field('call_to_action') ?></h4>-->
+								
+                                <ul class="cat">
+                                	<?php
+	                                    $id = get_the_ID();
+	                                    $category_detail = get_the_category($id);        
+	                                    foreach ($category_detail as $cd) {
+	                                        $nomecategoria = $cd->cat_name;
+	                                        $linkcategoria = get_bloginfo('url').'/categoria/'.$cd->slug;
+	                                        echo '<li><a href="'.$linkcategoria.'">'.$nomecategoria.'</a></li>';
+	                                    }
+	                                ?>
+                                </ul>
 							</div>
 						</div>
 					</article>

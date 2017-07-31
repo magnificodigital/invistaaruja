@@ -283,12 +283,22 @@ $alturabanner : 500px;
 	}
 
 	.cat {
+		padding-left: 0;
+		li:first-child {
+			margin-left: 0;
+			padding-left: 0;
+			border-left: 0;
+		}
 		a {color: #777 !important;}
-		display: inline;
-		margin-left: 10px;
-		//font-size: 18px;
-		padding-left: 10px;
-		border-left: 1px solid #EEE;
+		a:hover {color: $cor1 !important;}
+		li {
+			margin-left: 10px;
+			//font-size: 18px;
+			list-style: none;
+			padding-left: 10px;
+			float: left;
+			border-left: 1px solid #EEE;
+		}
 	}
 
 	.thumbnail {
@@ -649,11 +659,13 @@ header.category {
 	@media (max-width: 543px) {.recent-posts {display: none;}}
 }
 
-#single-page.search-results .headerWrapper {
-	background: url('../img/bg_search.jpg') no-repeat center top;
+#single-page.search-results .headerWrapper,
+#single-page.tag .headerWrapper {
+	background-image: url('../img/bg_search.jpg') no-repeat center top;
 	background-size: cover;
 }
-#single-page.search-results .headerWrapper:before {height: 150px;}
+#single-page.search-results .headerWrapper:before,
+#single-page.tag .headerWrapper:before {height: 150px;}
 
 #page404 {
 	text-align: center;
@@ -810,4 +822,24 @@ header.category {
 	}
 	a:hover {color: $cor1;}
 	.current {color: $cor1;}
+}
+
+.tags{ 
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #EEE;
+	display: block;
+	position: relative;
+	a {
+		background-color: $cor1;
+		color: #FFF;
+		text-decoration: none;
+		padding: 3px;
+		margin-right: 5px;
+		border-radius: 2px;
+		@include transicao (0.2s);
+		&:hover {
+			background-color: $cor1dark;
+		}
+	}
 }

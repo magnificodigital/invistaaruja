@@ -270,13 +270,25 @@ header#site {
     display: inline; }
   .page .post .cat,
   .post .cat {
-    display: inline;
-    margin-left: 10px;
-    padding-left: 10px;
-    border-left: 1px solid #EEE; }
+    padding-left: 0; }
+    .page .post .cat li:first-child,
+    .post .cat li:first-child {
+      margin-left: 0;
+      padding-left: 0;
+      border-left: 0; }
     .page .post .cat a,
     .post .cat a {
       color: #777 !important; }
+    .page .post .cat a:hover,
+    .post .cat a:hover {
+      color: #bf262b !important; }
+    .page .post .cat li,
+    .post .cat li {
+      margin-left: 10px;
+      list-style: none;
+      padding-left: 10px;
+      float: left;
+      border-left: 1px solid #EEE; }
   .page .post .thumbnail,
   .post .thumbnail {
     position: relative;
@@ -605,11 +617,13 @@ header.category {
     #sidebar .recent-posts {
       display: none; } }
 
-#single-page.search-results .headerWrapper {
-  background: url("../img/bg_search.jpg") no-repeat center top;
+#single-page.search-results .headerWrapper,
+#single-page.tag .headerWrapper {
+  background-image: url("../img/bg_search.jpg") no-repeat center top;
   background-size: cover; }
 
-#single-page.search-results .headerWrapper:before {
+#single-page.search-results .headerWrapper:before,
+#single-page.tag .headerWrapper:before {
   height: 150px; }
 
 #page404 {
@@ -747,5 +761,25 @@ header.category {
     color: #bf262b; }
   .navigation .current {
     color: #bf262b; }
+
+.tags {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #EEE;
+  display: block;
+  position: relative; }
+  .tags a {
+    background-color: #bf262b;
+    color: #FFF;
+    text-decoration: none;
+    padding: 3px;
+    margin-right: 5px;
+    border-radius: 2px;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
+    .tags a:hover {
+      background-color: #7c1115; }
 
 /*# sourceMappingURL=main.css.map */
