@@ -33,9 +33,10 @@
 					</ul>
 				</div>
 			</div>
+			<!--
 			<center>
 				<a href="http://magnificodigital.com" target="_blank" class="createdmagnifico gray"></a>
-			</center>
+			</center>-->
 		</div>
 	</div>
 </footer>

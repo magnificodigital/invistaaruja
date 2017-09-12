@@ -25,7 +25,6 @@ $('.readmore').on('click',function(){
 	$.scrollTo((scroll) || 0, 750);
 });
 
-
 function footerfixo(elemento,destino) {
 	alturawindow = window.innerHeight;
 	var d = destino.outerHeight() + destino.offset().top;

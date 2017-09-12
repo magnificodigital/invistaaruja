@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/img/favicon.png">
-	<link rel="stylesheet" href="http://magnificodigital.com/assets/createdby/createdby.css" />
+	<!--<link rel="stylesheet" href="http://magnificodigital.com/assets/createdby/createdby.css" />-->
 	<!--[if IE 7]>
 	<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/font-awesome-ie7.min.css">
 	<![endif]-->
