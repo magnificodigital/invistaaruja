@@ -6,15 +6,14 @@
 			<div class="container">
 				<p class="subscribe"><i class="fa fa-envelope"></i> <?php _e('Receba dicas e oportunidades por email:') ?></p>
 				<div class="pull-right">
-					<form id="formnews_footer" name="formnews_footer" action="<?php bloginfo('url') ?>" method="post">
+					<form id="formnews_footer" name="newsletter-invista" action="<?php bloginfo('url') ?>" method="post">
 						<input type="text" name="nomenews" placeholder="Nome:" required>
 						<input type="email" name="emailnews" placeholder="E-mail:" required>
 						<button type="submit"><?php _e('Inscrever') ?></button>
 					</form>
 					<div id="link-redes-sociais">
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-instagram"></i></a>
-						<a href="#"><i class="fa fa-google"></i></a>
+						<a href="https://www.facebook.com/InvistaEmAruja/" target="_blank"><i class="fa fa-facebook"></i></a>
+						<a href="https://www.instagram.com/invistaemaruja/"><i class="fa fa-instagram" target="_blank"></i></a>
 					</div>
 				</div>
 			</div>
@@ -64,18 +63,12 @@
 <!--integração rd -->
 <script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/integration/stable/rd-js-integration.min.js"></script>  
 <script type="text/javascript">
-
     var meus_campos = {
-        'nomenews': 'nome',
-        'emailnews': 'email'
+        'emailnews': 'email',
+        'nomenews': 'nome'
      };
     options = { fieldMapping: meus_campos };
-    RdIntegration.integrate('5bc74d9a15dc71ab1bd0bc162ae544d5', '[INVISTA ARUJÁ] - Form Newsletter', options);  
-
-    $('#formnews_footer').submit(function(){
-    	alert('Cadastro realizado com sucesso!');
-    });
-
+    RdIntegration.integrate('c690c1f8cc4af7269cc353c80d1968eb', '[ INVISTA ARUJÁ ] - Newsletter', options);  
 </script>
 
 </body>
