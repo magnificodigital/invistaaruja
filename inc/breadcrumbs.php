@@ -1,3 +1,12 @@
+<?php //wp_custom_breadcrumbs();
+
+if ( function_exists('yoast_breadcrumb') ) {
+yoast_breadcrumb('
+<nav class="breadcrumbs">','</nav>
+');
+} ?>
+
+<?php /*
 <nav class="breadcrumbs">
 	<ol>
 		<li><a href="<?php bloginfo('url') ?>"><i class="fa fa-home"></i></a></li>
@@ -21,3 +30,4 @@
 		<li><a href="<?php the_permalink() ?>"><?php the_title() ?></a></li>
 	</ol>	
 </nav>
+*/ ?>
