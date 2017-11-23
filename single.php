@@ -26,7 +26,14 @@
 				<div class="col-md-9 pull-right">
 					<?php get_template_part('inc/breadcrumbs'); ?>
 					<div class="content-post">
-						<?php the_content(); ?>
+						<?php 
+						the_content();
+						$form = get_field('codigo_formulario');
+						if (isset($form) && !empty($form)) {
+							echo '<div class="single-form-wrapper">';
+							echo $form;
+							echo '</div>';
+						} ?>
 						<?php the_tags('<div class="tags">', "  ", '</div>' ); ?> 
 					</div>
 				</div>
